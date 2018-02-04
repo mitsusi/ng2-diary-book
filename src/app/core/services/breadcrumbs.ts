@@ -8,13 +8,14 @@ export class BreadcrumbsService {
     accumulatedBreadcrumbs: string[] = [],
   ) {
     const { children, data: { breadcrumb, isRoot } } = activatedRouteSnapshot;
+    let currentBreadcrumb;
     if (children.length === 0) {
       // TODO должно быть заменено на что-то более логичное
-      const currentBreadcrumb = breadcrumb || '';
+      currentBreadcrumb = breadcrumb || '';
       return [...accumulatedBreadcrumbs, currentBreadcrumb];
     }
 
-    const currentBreadcrumb = !isRoot ? breadcrumb || '' : '';
+    currentBreadcrumb = !isRoot ? breadcrumb || '' : '';
 
     return this.getBreadcrumbs(children[0], [
       ...accumulatedBreadcrumbs,

@@ -32,9 +32,11 @@ export class TagsService {
   getTagsList(tagsRequestFilter?: TagsRequestFilter): Observable<any> {
     return this.http
       .get<Tag[]>(
-        `${this.getTagsPrefix()}${tagsRequestFilter && tagsRequestFilter.query
-          ? `?query=` + tagsRequestFilter.query
-          : ''}`,
+        `${this.getTagsPrefix()}${
+          tagsRequestFilter && tagsRequestFilter.query
+            ? `?query=` + tagsRequestFilter.query
+            : ''
+        }`,
       )
       .map((tagsResponse: any) => tagsResponse.items);
   }

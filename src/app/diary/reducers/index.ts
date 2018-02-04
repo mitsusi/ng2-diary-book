@@ -7,7 +7,7 @@ export interface DiaryState {
 }
 
 export interface State extends fromRoot.State {
-  'diary': DiaryState;
+  diary: DiaryState;
 }
 
 export const reducers = {
