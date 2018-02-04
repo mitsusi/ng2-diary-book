@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MaterialModule,
-  MdDatepickerModule,
-  MdNativeDateModule,
+  MatCommonModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -29,13 +29,13 @@ export const COMPONENTS = [
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MaterialModule,
+    MatCommonModule,
     RouterModule,
     FormsModule,
     PipesModule,
-    MdNativeDateModule,
-    MdDatepickerModule,
-    MdDatepickerModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatDatepickerModule,
     CoreModule,
   ],
   declarations: COMPONENTS,

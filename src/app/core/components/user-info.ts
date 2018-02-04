@@ -11,7 +11,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         <span>{{displayName}}</span>
       </div>
       <span class="exit-button">
-        <md-icon (click)="onExit.emit();">exit_to_app</md-icon>
+        <mat-icon (click)="onExit.emit();">exit_to_app</mat-icon>
       </span>
     </div>
   `,

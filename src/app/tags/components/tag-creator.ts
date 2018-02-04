@@ -3,15 +3,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'tags-creator',
   template: `
-    <md-input-container>
-      <input mdInput
+    <mat-input-container>
+      <input matInput
              #input
              [(ngModel)]="value"
              (keyup.enter)="onEnterPressed.emit(input.value);"
              placeholder="Введите название тега..."
              mask="XXXXXXXXXXXXXXX"
       />
-    </md-input-container>
+    </mat-input-container>
   `,
 })
 export class TagCreatorComponent implements OnInit {

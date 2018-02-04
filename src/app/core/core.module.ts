@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  MaterialModule,
-  MdButtonModule,
-  MdIconModule,
-} from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './modules/http-interceptors/auth-append-token';
+
+import {
+  MatInputModule,
+  MatButtonModule,
+  MatIconModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatCardModule,
+  MatSidenavModule,
+  MatListModule,
+  MatToolbarModule,
+  MatProgressSpinnerModule,
+} from '@angular/material';
 
 import { AppComponent } from './containers/app';
 import { NotFoundPageComponent } from './containers/not-found-page';
@@ -51,29 +59,40 @@ export const COMPONENTS = [
   UserInfoComponent,
 ];
 
-const MD_MODULES = [MaterialModule, MdButtonModule, MdIconModule];
+const MAT_COMPONENTS = [
+  MatInputModule,
+  MatButtonModule,
+  MatIconModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatCardModule,
+  MatSidenavModule,
+  MatListModule,
+  MatToolbarModule,
+  MatProgressSpinnerModule,
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ...MD_MODULES,
     RouterModule,
     PipesModule,
     HttpClientModule,
     EffectsModule.forRoot([RouterEffects]),
     TagsAutoCompleteModule,
     TagsViewerModule,
+    [...MAT_COMPONENTS],
   ],
   declarations: COMPONENTS,
   exports: [
     ...COMPONENTS,
     CommonModule,
     FormsModule,
-    ...MD_MODULES,
     HttpClientModule,
     TagsAutoCompleteModule,
     TagsViewerModule,
+    [...MAT_COMPONENTS],
   ],
   providers: [
     RouterHelperService,

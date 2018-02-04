@@ -15,25 +15,25 @@ import { RouterHelperService } from '../../core/services/router';
 @Component({
   template: `
     <common-show-if-logged-in>
-      <md-card>
-        <md-list>
-          <md-list-item>
+      <mat-card>
+        <mat-list>
+          <mat-list-item>
             <tags-creator
               [clearValue]="clearFieldEmitter"
               (onEnterPressed)="onCreateTagCommand($event)"
             ></tags-creator>
-          </md-list-item>
-          <md-list-item *ngFor="let tag of tags$ | async">
+          </mat-list-item>
+          <mat-list-item *ngFor="let tag of tags$ | async">
             {{tag.name}}
-            <md-icon (click)="onClick(tag);">comment</md-icon>
-          </md-list-item>
-        </md-list>
-      </md-card>
+            <mat-icon (click)="onClick(tag);">comment</mat-icon>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
     </common-show-if-logged-in>
   `,
   styles: [
     `
-      md-list-item:not(:first-child) {
+      mat-list-item:not(:first-child) {
         border-top: 1px dashed #dcdcdc;
       }
     `,

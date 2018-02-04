@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MD_DIALOG_DATA } from '@angular/material';
+import { MAT_DIALOG_DATA } from '@angular/material';
 import { DiaryEntry } from 'ng2-diary-book-shared-models';
 
 @Component({
@@ -13,7 +13,7 @@ import { DiaryEntry } from 'ng2-diary-book-shared-models';
 export class EntryEditDialogComponent {
   entry: DiaryEntry;
 
-  constructor(@Inject(MD_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.entry = data;
   }
 }

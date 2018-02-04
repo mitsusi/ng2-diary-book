@@ -3,12 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   template: `
-    <md-card>
-      <md-card-header>
-        <h4>Добавление записи</h4><span (click)="goBack();">Назад <md-icon><i class="material-icons">arrow_back</i></md-icon></span>
-      </md-card-header>
+    <mat-card>
+      <mat-card-header>
+        <h4>Добавление записи</h4><span (click)="goBack();">Назад <mat-icon><i class="material-icons">arrow_back</i></mat-icon></span>
+      </mat-card-header>
       <diary-entry-create></diary-entry-create>
-    </md-card>
+    </mat-card>
   `,
 })
 export class EntryCreateContainer {

@@ -4,10 +4,10 @@ import { TagsAutoCompleteExampleComponent } from './components-showcase/tags-aut
 import { RouterModule } from '@angular/router';
 import { FeaturesRootComponent } from './root';
 import { ComponentsListComponent } from './components-showcase/components-list';
-import { MaterialModule, MdButtonModule } from '@angular/material';
+import { MatCommonModule, MatButtonModule } from '@angular/material';
 import { ExampleComponentsContainer } from './components-showcase/components-container';
 
-const MD_MODULES = [MaterialModule, MdButtonModule];
+const MD_MODULES = [MatCommonModule, MatButtonModule];
 
 @NgModule({
   imports: [

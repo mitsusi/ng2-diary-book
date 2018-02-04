@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-tags-editor',
   template: `
-    <md-card>
+    <mat-card>
       Tags editor
-    </md-card>
+    </mat-card>
   `,
 })
 export class TagsEditorComponent {}

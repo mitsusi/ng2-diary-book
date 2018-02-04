@@ -18,29 +18,29 @@ import { Tag } from 'ng2-diary-book-shared-models';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <common-show-if-logged-in>
-      <md-card>
+      <mat-card>
         <tags-auto-complete
           [placeholder]="'Введите теги...'"
           [(selectedTags)]="filterTags"
           (selectedTagsChange)="onTagsFilterChanged($event)"
         ></tags-auto-complete>
-      </md-card>
+      </mat-card>
       <diary-entries-list
         [entries]="diaryEntries$ | async"
         (edit)="goToEdit($event)"
         (tagClick)="onTagClicked($event);"
       ></diary-entries-list>
       <div *ngIf="(diaryEntries$ | async)?.length === 0">
-        <md-card>No entries found :'(</md-card>
+        <mat-card>No entries found :'(</mat-card>
       </div>
-      <button md-mini-fab class="example-fab" (click)="goToAdd()">
-        <md-icon>add</md-icon>
+      <button mat-mini-fab class="example-fab" (click)="goToAdd()">
+        <mat-icon>add</mat-icon>
       </button>
     </common-show-if-logged-in>
   `,
   styles: [
     `
-      md-card {
+      mat-card {
         margin-bottom: 10px;
       }
     `,

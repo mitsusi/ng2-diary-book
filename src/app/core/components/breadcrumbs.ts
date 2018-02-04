@@ -4,13 +4,13 @@ import { Component, Input } from '@angular/core';
   selector: 'app-breadcrumbs-component',
   template: `
     <div>
-      <md-card>
+      <mat-card>
       <span>{{ getBreadcrumbsAsString() }}</span>
-      </md-card>
+      </mat-card>
     </div>
   `,
   styles: [
-    `md-card {
+    `mat-card {
       padding: 10px;
     }`,
   ],

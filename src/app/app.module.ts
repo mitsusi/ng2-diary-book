@@ -13,7 +13,7 @@ import {
 } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { reducers, metaReducers, CustomSerializer } from './reducers';
+import { reducers, CustomSerializer } from './reducers';
 
 import { getRoutes } from './routes';
 
@@ -27,20 +27,16 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './core/containers/app';
 
 import 'hammerjs';
-import { MdInputModule } from '@angular/material';
-
-const MD_MODULES = [MdInputModule];
 
 @NgModule({
   imports: [
-    ...MD_MODULES,
-    CommonModule,
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     HttpModule,
     RouterModule.forRoot(getRoutes(!environment.production), { useHash: true }),
 
-    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreModule.forRoot(reducers),
     StoreRouterConnectingModule,
     !environment.production
       ? StoreDevtoolsModule.instrument({ maxAge: 50 })

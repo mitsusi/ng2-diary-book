@@ -87,7 +87,7 @@ describe('UserInfoComponent', () => {
       component.onExit.subscribe(spy);
 
       const de: DebugElement = fixture.debugElement.query(
-        By.css('span > md-icon'),
+        By.css('span > mat-icon'),
       );
 
       de.triggerEventHandler('click', null);

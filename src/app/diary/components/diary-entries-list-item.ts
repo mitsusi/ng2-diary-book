@@ -11,13 +11,13 @@ import { DiaryEntry } from 'ng2-diary-book-shared-models';
   selector: 'diary-entries-list-item',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <md-card>
+    <mat-card>
       <div class="edit-button-container" *ngIf="!isEditDisabled">
-        <md-icon class="edit-icon" title="Edit" (click)="edit.emit(entry)">mode_edit</md-icon>
+        <mat-icon class="edit-icon" title="Edit" (click)="edit.emit(entry)">mode_edit</mat-icon>
       </div>
       <div>
-        <md-card-title>{{ entry.date | date:'MMM d' }}</md-card-title>
-        <md-card-content>
+        <mat-card-title>{{ entry.date | date:'MMM d' }}</mat-card-title>
+        <mat-card-content>
           <div [innerHTML]="entry.message | diaryMarkdown"></div>
 
           <tags-viewer [tags]="entry.tags" (tagClick)="tagClick.emit($event)"></tags-viewer>
@@ -25,9 +25,9 @@ import { DiaryEntry } from 'ng2-diary-book-shared-models';
           <div class="content-footer">
             Create date: {{ entry.createDate | date }}
           </div>
-        </md-card-content>
+        </mat-card-content>
       </div>
-    </md-card>
+    </mat-card>
   `,
   styles: [
     `.edit-icon {
@@ -43,7 +43,7 @@ import { DiaryEntry } from 'ng2-diary-book-shared-models';
       top: 15px;
       right: 15px;
     }`,
-    `.edit-button-container md-icon {
+    `.edit-button-container mat-icon {
       cursor: default;
       font-size:20px;
       height:20px;

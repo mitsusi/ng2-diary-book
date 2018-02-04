@@ -17,7 +17,7 @@ import * as fromRoot from '../../reducers';
         <div class="spinner" [class.hidden]="!showLoader">
           <div class="full-page aligner">
             <div class="aligner-item">
-              <md-progress-spinner mode="indeterminate"></md-progress-spinner>
+              <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
             </div>
           </div>
         </div>

@@ -4,11 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-examples-container',
   template: `
-    <md-card>
-      <button md-button (click)="goBack();">Назад</button>
+    <mat-card>
+      <button mat-button (click)="goBack();">Назад</button>
       <hr>
       <ng-content></ng-content>
-    </md-card>
+    </mat-card>
   `,
 })
 export class ExampleComponentsContainer {

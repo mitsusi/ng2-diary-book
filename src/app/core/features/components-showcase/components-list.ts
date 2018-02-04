@@ -4,9 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   template: `
-    <md-card>
-      <button md-button (click)="goToTagsAutoComplete()">Tags auto complete</button>
-    </md-card>
+    <mat-card>
+      <button mat-button (click)="goToTagsAutoComplete()">Tags auto complete</button>
+    </mat-card>
   `,
 })
 export class ComponentsListComponent {

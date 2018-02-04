@@ -10,11 +10,11 @@ import {
   selector: 'common-date-picker',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <md-input-container>
-      <input disabled mdInput [value]="dateValue" [mdDatepicker]="picker" placeholder="Choose a date">
-      <button mdSuffix [mdDatepickerToggle]="picker"></button>
-    </md-input-container>
-    <md-datepicker (selectedChanged)="onSelectedChanged($event)"  #picker></md-datepicker>
+    <mat-input-container>
+      <input disabled matInput [value]="dateValue" [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker (selectedChanged)="onSelectedChanged($event)" #picker></mat-datepicker>
+    </mat-input-container>
   `,
 })
 export class CommonDatePickerComponent {

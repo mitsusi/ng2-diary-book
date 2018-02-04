@@ -14,15 +14,15 @@ import { DiaryEntry } from 'ng2-diary-book-shared-models';
   template: `
     <div class="example-form">
       <p>
-        <md-input-container class="example-full-width">
-          <textarea mdInput [(ngModel)]="_entry.message" placeholder="Введите запись">1600 Amphitheatre Pkwy</textarea>
-        </md-input-container>
+        <mat-input-container class="example-full-width">
+          <textarea matInput [(ngModel)]="_entry.message" placeholder="Введите запись">1600 Amphitheatre Pkwy</textarea>
+        </mat-input-container>
       </p>
       <p>
         <common-date-picker [(date)]="_entry.date"></common-date-picker>
       </p>
       <tags-auto-complete [(selectedTags)]="_entry.tags"></tags-auto-complete>
-      <button md-raised-button (click)="submit.emit(_entry)">{{options.buttonLabel}}</button>
+      <button mat-raised-button (click)="submit.emit(_entry)">{{options.buttonLabel}}</button>
     </div>
   `,
   styles: [

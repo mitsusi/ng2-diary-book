@@ -11,14 +11,14 @@ import * as fromRoot from '../../reducers';
 
 @Component({
   template: `
-    <md-card>
-      <md-card-header>
-        <h4>Изменение записи</h4><span (click)="goBack();">Назад <md-icon><i class="material-icons">arrow_back</i></md-icon></span>
-      </md-card-header>
+    <mat-card>
+      <mat-card-header>
+        <h4>Изменение записи</h4><span (click)="goBack();">Назад <mat-icon><i class="material-icons">arrow_back</i></mat-icon></span>
+      </mat-card-header>
       <diary-entry-edit
         [entry]="entryToEdit$ | async"
       ></diary-entry-edit>
-    </md-card>
+    </mat-card>
   `,
 })
 export class EntryEditContainer {

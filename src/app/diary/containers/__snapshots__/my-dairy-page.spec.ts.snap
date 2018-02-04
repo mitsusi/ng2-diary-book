@@ -47,16 +47,16 @@ exports[`MyDairyPageComponent полная имитация  1`] = `
         <button
           _ngcontent-c6=""
           class="example-fab"
-          md-mini-fab=""
+          mat-mini-fab=""
         >
-          <md-icon
+          <mat-icon
             _ngcontent-c6=""
             class="mat-icon material-icons"
             role="img"
             aria-hidden="true"
           >
             add
-          </md-icon>
+          </mat-icon>
         </button>
       </div>
     </div>
